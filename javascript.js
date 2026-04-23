@@ -27,6 +27,7 @@ function humanChoice() {
     }
 }
 
+function playGame() {
     let humanScore = 0;
     let computerScore = 0;
     function playRound(humanChoice, computerChoice) {
@@ -52,3 +53,22 @@ function humanChoice() {
             console.log(`It's a tie! Score: You ${humanScore} x ${computerScore} Computer`);
         }
     }
+    
+    playRound(humanChoice(), computerChoice());
+    playRound(humanChoice(), computerChoice());
+    playRound(humanChoice(), computerChoice());
+    playRound(humanChoice(), computerChoice());
+    playRound(humanChoice(), computerChoice());
+    
+    if (humanScore > computerScore) {
+        console.log("Congratulations! You won the game!");
+    } else if (humanScore < computerScore) {
+        console.log("Game over, pal. Better luck next time.");
+    } else if (humanScore === computerScore && humanScore != 0) {
+        console.log("Looks like it ended in a tie. Refresh to try again.");
+    } else {
+        console.log("Huh? I thought you wanted to play...");
+    }
+}
+
+    
