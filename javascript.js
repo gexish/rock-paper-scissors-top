@@ -71,4 +71,4 @@ function playGame() {
     }
 }
 
-    
+playGame();
