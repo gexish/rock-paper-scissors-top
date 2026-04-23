@@ -26,3 +26,29 @@ function humanChoice() {
         return;
     }
 }
+
+    let humanScore = 0;
+    let computerScore = 0;
+    function playRound(humanChoice, computerChoice) {
+        if (humanChoice === "rock" && computerChoice === "scissors") {
+            humanScore++;
+            console.log(`You won this round. Score: You ${humanScore} x ${computerScore} Computer`);
+        } else if (humanChoice === "paper" && computerChoice === "rock") {
+            humanScore++;
+            console.log(`You won this round. Score: You ${humanScore} x ${computerScore} Computer`);
+        } else if (humanChoice === "scissors" && computerChoice === "paper") {
+            humanScore++;
+            console.log(`You won this round. Score: You ${humanScore} x ${computerScore} Computer`);
+        } else if (humanChoice === "rock" && computerChoice === "paper") {
+            computerScore++;
+            console.log(`You lost this round. Score: You ${humanScore} x ${computerScore} Computer`);
+        } else if (humanChoice === "paper" && computerChoice === "scissors") {
+            computerScore++;
+            console.log(`You lost this round. Score: You ${humanScore} x ${computerScore} Computer`);
+        } else if (humanChoice === "scissors" && computerChoice === "rock") {
+            computerScore++;
+            console.log(`You lost this round. Score: You ${humanScore} x ${computerScore} Computer`);
+        } else if (humanChoice === computerChoice) {
+            console.log(`It's a tie! Score: You ${humanScore} x ${computerScore} Computer`);
+        }
+    }
